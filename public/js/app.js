@@ -13,10 +13,10 @@ weatherForm.addEventListener('submit',(e)=>{
     res.json().then((data)=> {
         const errorHTML = `<br><p>Error: <span id="locationRes"></span></p>`
         if(data.error){
-            loading.innerHTML = "";
+            loading.innerHTML = " ";
             document.getElementById("forecast").insertAdjacentHTML('afterbegin', errorHTML);
         }else {
-            loading.innerHTML = "";
+            loading.innerHTML = " ";
             const dataHTML = `<br><p><strong>Forecast: </strong><span>${data.forecast}</span></p>`
             document.getElementById("forecast").insertAdjacentHTML('afterbegin', dataHTML);
         }
